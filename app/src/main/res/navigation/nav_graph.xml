@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.tpa2.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addCatFragment"
+            app:destination="@id/addCatFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_catFragment"
+            app:destination="@id/catFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCatFragment"
+        android:name="com.example.tpa2.ui.addcat.AddCatFragment"
+        android:label="fragment_add_cat"
+        tools:layout="@layout/fragment_add_cat" >
+        <action
+            android:id="@+id/action_addCatFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/catFragment"
+        android:name="com.example.tpa2.ui.cat.CatFragment"
+        android:label="fragment_cat"
+        tools:layout="@layout/fragment_cat" >
+        <action
+            android:id="@+id/action_catFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
